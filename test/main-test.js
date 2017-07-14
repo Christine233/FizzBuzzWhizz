@@ -12,8 +12,16 @@ describe('FizzBuzzWith', () => {
     expect(actualResult).toEqual(expectResult);
   });
 
+//能被3和5或7整除但是包含3
+    it('when number can only be by 3 and 5 or 7,and include in 3,should return the Fizz', () => {
+        let num = 35;
+        const actualResult = fizzBuzzWith(num);
+        let expectResult = 'Fizz';
+        expect(actualResult).toEqual(expectResult);
+    });
+
 //只能被3整除
-  it('when number is times of 9,should return 9', () => {
+  it('when number can only be divisible by 3,should return the Fizz', () => {
     let num = 9;
     const actualResult = fizzBuzzWith(num);
     let expectResult = 'Fizz';
@@ -21,7 +29,7 @@ describe('FizzBuzzWith', () => {
   });
 
 //只能被5整除
-    it('when number is times of 10,should return 10', () => {
+    it('when number can only be divisible by 5,should return the Buzz', () => {
         let num = 10;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'Buzz';
@@ -29,7 +37,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //只能被7整除
-    it('when number is times of 14,should return 14', () => {
+    it('when number can only be divisible by 7,should return the Whizz', () => {
         let num = 14;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'Whizz';
@@ -37,7 +45,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //只能被3,5整除
-    it('when number is times of 15,should return 15', () => {
+    it('when number can only be divisible by 3 and 5,should return FizzBuzz', () => {
         let num = 15;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'FizzBuzz';
@@ -45,7 +53,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //只能被3,7整除
-    it('when number is times of 21,should return 21', () => {
+    it('when number can only be divisible by 3 and 7,should return FizzWhizz', () => {
         let num = 21;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'FizzWhizz';
@@ -53,7 +61,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //只能被5,7整除
-    it('when number is times of 70,should return 70', () => {
+    it('when number can only be divisible by 5 and 7,should return BuzzWhizz', () => {
         let num = 70;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'BuzzWhizz';
@@ -61,7 +69,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //能被3,5,7整除
-    it('when number is times of 105,should return 105', () => {
+    it('when number can only be divisible by 3,5 and 7,should return FizzBuzzWhizz', () => {
         let num = 105;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 'FizzBuzzWhizz';
@@ -69,7 +77,7 @@ describe('FizzBuzzWith', () => {
     });
 
 //其他
-    it('should return 1', () => {
+    it('else,should return the number', () => {
         let num = 1;
         const actualResult = fizzBuzzWith(num);
         let expectResult = 1;
