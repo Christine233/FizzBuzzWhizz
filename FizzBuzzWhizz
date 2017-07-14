@@ -1,7 +1,12 @@
-#1.输入100以内的一个数，判断输入的数字满足哪种情况，用numInfo的数值区分不同情况
+#1.输入100以内的一个数，判断输入的数字是否满足特殊情况（包含3且能被3整除），用numInfo.flag区分不同情况
 输入：inputs:number
-输出：numInfo:number
+输出：numInfo:[{number:num,flag:String}]
 
-#2.判断numInfo的数值，根据numInfo数值输出不同字符
-输入：numInfo:number
+#2.判断numInfo的数值，若numInfo.flag = false,数值输出数据
+输入：numInfo:[{number:num,flag:String}]
+输出：output:number
+
+#3.判断numInfo的数值，若numInfo.flag = true,数值输出字符
+输入：numInfo:[{number:num,flag:String}]
 输出：output:String
+
