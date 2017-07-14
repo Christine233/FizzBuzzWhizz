@@ -2,6 +2,6 @@
 输入：inputs:number
 输出：numInfo:number
 
-#2.判断numInfo的数值，根据flag数值输出不同字符
+#2.判断numInfo的数值，根据numInfo数值输出不同字符
 输入：numInfo:number
 输出：output:String
