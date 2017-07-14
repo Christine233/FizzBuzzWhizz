@@ -1,0 +1,7 @@
+#1.输入100以内的一个数，判断输入的数字满足哪种情况，用flag的数值区分不同情况
+输入：inputs:number
+输出：flag:number
+
+#2.判断flag的数值，根据flag数值输出不同字符
+输入：flag:number
+输出：output:String
