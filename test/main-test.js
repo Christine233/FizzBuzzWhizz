@@ -1,14 +1,14 @@
 'use strict';
 
-describe('fizzBuzzWith', () => {
+describe('FizzBuzzWith', () => {
 
-  it('when number is times of 3,should return fizz', () => {
+  it('when number is times of 4,should return ({num: 4, flag: 0})', () => {
     // Given
-    let num = 9;
+    let num = 4;
     // when
     const actualResult = fizzBuzzWith(num);
     // then..
-    let expectResult = 'fizz';
+    let expectResult = [{num:4, flag:0}];
     expect(actualResult).toEqual(expectResult);
     // const inputs = [
     //   {
