@@ -1,7 +1,7 @@
 'use strict';
 
-function fizzBuzzWith(inputs) {
-  if(inputs ){
+function fizzBuzzWith(num) {
+  if(num.toString()){
     return 'fizz';
   }
 }
