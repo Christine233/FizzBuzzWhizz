@@ -1,20 +1,38 @@
 'use strict';
-
-function fizzBuzzWith(num) {
-//#1.输入100以内的一个数，判断输入的数字是否满足特殊情况（包含3且能被3整除），用numInfo.flag区分不同情况
-//预计10min,实际7min
-    function special(num) {
-      let numInfo = [];
-      let flag = 0;
-      let stringNum = num.toString();
-        for(let i in stringNum){
-          if(i === '3' && num % 3 === 0 && num % 5 != 0 && num % 7 != 0 ){
-            flag = -1;
-            break;
-          }
+//#1.输入100以内的一个数，判断输入的数字满足什么情况，并输出对应的返回值
+//预计15min,实际min
+function fizzBuzzWith(numInfo) {
+    let stringNum = numInfo.toString();
+    let flag = stringNum.indexOf('3');
+        if(flag != -1 || numInfo % 3 === 0 && numInfo % 5 != 0 && numInfo % 7 != 0){
+            return 'Fizz';
         }
-        numInfo.push({num:num, flag:flag});
-        return numInfo;
-    }
-    return(special(num));
+        else if(numInfo % 3 != 0 && numInfo % 5 === 0 && numInfo % 7 != 0){
+            return 'Buzz';
+        }
+        else if(numInfo % 3 != 0 && numInfo % 5 != 0 && numInfo % 7 === 0){
+            return 'Whizz';
+        }
+        else if(numInfo % 3 === 0 && numInfo % 5 === 0 && numInfo % 7 != 0){
+            return 'FizzBuzz';
+        }
+        else if(numInfo % 3 === 0 && numInfo % 5 != 0 && numInfo % 7 === 0){
+            return 'FizzWhizz';
+        }
+        else if(numInfo % 3 != 0 && numInfo % 5 === 0 && numInfo % 7 === 0){
+            return 'BuzzWhizz';
+        }
+        else if(numInfo % 3 === 0 && numInfo % 5 === 0 && numInfo % 7 === 0){
+            return 'FizzBuzzWhizz';
+        }
+        else {
+            return numInfo;
+        }
+        // if(i != '3'){
+        //     if(numInfo % 3 === 0 && numInfo % 5 != 0 && numInfo % 7 != 0){
+        //         return 'Fizz';
+        //     }
+        //     else if(numInfo % 3 != 0 && numInfo % 5 != 0 && numInfo % 7 != 0 ){
+        //         return numInfo;
+        // }
 }
